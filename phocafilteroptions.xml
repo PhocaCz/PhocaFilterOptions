@@ -7,7 +7,7 @@
 	<authorUrl>www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>
 	<license>GNU/GPL</license>
-	<version>3.0.0</version>
+	<version>3.0.2</version>
 	
 	<description>PLG_SYSTEM_PHOCAFILTEROPTIONS_DESCRIPTION</description>
 	
@@ -15,6 +15,12 @@
 		<filename plugin="phocafilteroptions">phocafilteroptions.php</filename>
 		<filename >index.html</filename>
 	</files>
+	
+	<media destination="plg_system_phocafilteroptions" folder="media">
+		<filename>index.html</filename>
+		<folder>js</folder>
+		<folder>css</folder>
+	</media>
 	
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.plg_system_phocafilteroptions.ini</language>
@@ -35,4 +41,8 @@
 			</fieldset>
 		</fields>
 	</config>
+	
+	<updateservers>
+		<server type="extension" name="plg_system_phocafilteroptions">https://raw.githubusercontent.com/PhocaCz/PhocaFilterOptions/master/manifest.xml</server>
+	</updateservers>
 </extension>
