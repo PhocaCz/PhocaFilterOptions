@@ -1,23 +1,22 @@
 <updates>
 	<update>
-		<name><![CDATA[ Phoca Filter Options ]]></name>
-		<description><![CDATA[ Phoca Filter Options System plugin is Joomla! CMS plugin which adds the ability to filter parameters in configuration options. ]]></description>
-		<element>plg_system_phocafilteroptions</element>
+		<name><![CDATA[ Phoca Filter Options System Plugin ]]></name>
+		<description><![CDATA[ Phoca Filter Options System Plugin is a Joomla! CMS Plugin. It adds the ability to filter parameters in configuration options or selected component edit views. ]]></description>
+		<element>phocafilteroptions</element>
+		<folder>system</folder>
 		<type>plugin</type>
-		<version>3.0.2</version>
-		<infourl title="Phoca Filter Options">https://www.phoca.cz/phoca-filter-options-system-plugin</infourl>
+		<version>3.0.3</version>
+		<infourl title="Phoca Filter Options System Plugin 3.0.3">https://www.phoca.cz/</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaFilterOptions/releases/download/3.0.1/plg_system_phocafilteroptions_v3.0.2.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaFilterOptions/releases/download/3.0.3/plg_system_phocafilteroptions_v3.0.3.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
 		</tags>
-		<maintainer>
-		<![CDATA[ Phoca.cz ]]>
-		</maintainer>
-		<maintainerurl>http://www.phoca.cz/</maintainerurl>
+		<maintainer><![CDATA[ Phoca.cz ]]></maintainer>
+		<maintainerurl>https://www.phoca.cz/</maintainerurl>
 		<section>Updates</section>
 		<targetplatform name="joomla" version="3.9"/>
-		<client>1</client>
+		<client>site</client>
 	</update>
 </updates>

@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 	function filterOptions(str) {
 		
-		let hideElements 		= '.tab-pane .alert, .tab-pane .field-spacer, fieldset legend, #sendtestmail, .tab-description';
+		let hideElements 		= '.tab-pane .alert, .tab-pane .field-spacer, fieldset legend, #sendtestmail, .tab-description, .tab-pane h3, .ph-admin-additional-box';
 		let hideElementBoxes	= '.tab-header, .ph-options-head, .ph-options-head-expert';
 		let tab 				= '#configTabs li a, .nav-tabs li a';
-		let tabContent			= '#configContent div.tab-pane, #config-document div.tab-pane';
-		let excludeTabs			= '#page-filters, #page-permissions, #permissions';
+		let tabContent			= '#configContent div.tab-pane, #config-document div.tab-pane, .tab-content .tab-pane';
+		let excludeTabs			= '#page-filters, #page-permissions, #permissions, #permissions_label';
 		let itemParameter		= '.control-group .control-label label';
 		let itemParameterBox	= '.control-group';
 		let tabRow				= '.tab-pane .row div';

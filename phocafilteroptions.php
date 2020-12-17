@@ -18,45 +18,70 @@ class plgSystemPhocaFilteroptions extends JPlugin
 		parent::__construct($subject, $config);
 	}
 	
+	public function isActive() {
+		
+		$app 					= JFactory::getApplication();
+		$option 				= $app->input->get('option', '', 'string');
+		$view 					= $app->input->get('view', '', 'string');
+		$layout 				= $app->input->get('layout', '', 'string');
+		$component_edit_view 	= $this->params->get('component_edit_view', array());
+		
+		if ($app->getName() != 'administrator') { 
+			return false;
+		}
+		
+		if ($option == 'com_config') { 
+			return true;
+		}
+		
+		if ($layout == 'edit' && in_array($option, $component_edit_view)) {
+			return true;
+		}
+		
+		return false;
+
+	}
+	
 	
 	function onBeforeRender() {
 		
+		$active = $this->isActive();
 		
-		$app 		= JFactory::getApplication();
-		$option 	= $app->input->get('option', '', 'string');
-		$view 		= $app->input->get('view', '', 'string');
-		
-		if ($app->getName() != 'administrator') { return true;}
-		
-		if ($option != 'com_config') { return true;}
-	//	if ($view != 'component') { return true;}
-		
+		if (!$active) {
+			return '';
+		}
 		
 		// Add JS
 		$document	= JFactory::getDocument();
-		$document->addScript(JURI::root(true).'/media/plg_system_phocafilteroptions/js/config-filter-options.js');
+		$document->addScript(JURI::root(true).'/media/plg_system_phocafilteroptions/js/config-filter-options.js');///
 		JHtml::stylesheet('media/plg_system_phocafilteroptions/css/filter-options.css' );
 		return true;
 	}
 	
 	function onAfterRender() {
 		
+		$active = $this->isActive();
 		
-		$app 		= JFactory::getApplication();
-		$option 	= $app->input->get('option', '', 'string');
-		$view 		= $app->input->get('view', '', 'string');
+		if (!$active) {
+			return '';
+		}
 		
-		if ($app->getName() != 'administrator') { return true;}
-		
-		if ($option != 'com_config') { return true;}
-		//if ($view != 'component') { return true;}
+		$app 					= JFactory::getApplication();
+		$option 				= $app->input->get('option', '', 'string');
 		
 		// Add HTML
 		$buffer = JResponse::getBody();
-		$addHtml = '<div class="row-fluid">'
+		
+		if ($option == 'com_config') {
+			$addHtml = '<div class="row-fluid ph-filter-options config">'
 					  .'<div class="span2"></div>'
 					  .'<div class="span10"><form class="form-inline"><input type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form></div>'
 				  .'</div>';
+		} else {
+			$addHtml = '<div class="ph-filter-options component '.$option.'">'
+					  .'<form class="form-inline"><input type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form>'
+				  .'</div>';
+		}	  
 		
 		// Use the easiest and quickest replace method
 		$buffer	= str_replace("<form action=", $addHtml . "<form action=", $buffer);

@@ -1,0 +1,16 @@
+{
+	"author": "Jan Pavelka (www.phoca.cz)",
+	"authorUrl": "https://www.phoca.cz",
+	"copyright": "Jan Pavelka",
+	"license": "GNU/GPL",
+	"projectName": "PhocaFilterOptions",
+	"extensionName": "Phoca Filter Options System Plugin",
+	"projectInitials" : "PFO",				  
+	"description": "Phoca Filter Options System Plugin is a Joomla! CMS Plugin. It adds the ability to filter parameters in configuration options or selected component edit views.",
+	"projectUrl": "https://www.phoca.cz/phoca-filter-options-system-plugin",
+	"projectDocumentationUrl": "https://www.phoca.cz/documentation/category/134-phoca-filter-options-system-plugin",
+	"projectDemo" : {
+		"Demo": "https://www.phoca.cz/"
+	},
+	"projectColor": "#895ED1"
+}
