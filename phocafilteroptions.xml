@@ -2,7 +2,7 @@
 <extension type="plugin" group="system" method="upgrade" version="3.9">
 	<name>plg_system_phocafilteroptions</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>17/12/2020</creationDate>
+	<creationDate>06/03/2021</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>

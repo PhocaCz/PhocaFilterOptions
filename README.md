@@ -50,6 +50,10 @@ Phoca Filter Options System Plugin is a Joomla! CMS Plugin. It adds the ability 
 
 
 
+
+
+
+
 ## Version
 
 3.0.3
