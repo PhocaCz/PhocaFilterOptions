@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" group="system" method="upgrade" version="3.9">
+<extension type="plugin" group="system" method="upgrade" version="4.0">
 	<name>plg_system_phocafilteroptions</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>06/03/2021</creationDate>
+	<creationDate>31/08/2021</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>
 	<license>GNU/GPL</license>
-	<version>3.0.3</version>
+	<version>4.0.3</version>
 	<description>PLG_SYSTEM_PHOCAFILTEROPTIONS_DESCRIPTION</description>
 	<projectName>PhocaFilterOptions</projectName>
 
@@ -18,9 +18,9 @@
 	</media>
 
 	<files>
+		<filename plugin="phocafilteroptions">phocafilteroptions.php</filename>
 		<filename plugin="phocafilteroptions">index.html</filename>
 		<filename plugin="phocafilteroptions">manifest.xml</filename>
-		<filename plugin="phocafilteroptions">phocafilteroptions.php</filename>
 	</files>
 
 	<languages>

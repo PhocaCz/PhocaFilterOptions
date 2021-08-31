@@ -1,23 +1,48 @@
-/* #config-document .filter-options-col {
-	float:left;
-	flex: none;
-	max-width: 100%;
-}
-#config-document .filter-options-col:empty {
-	display:none;
-}
-
-#config-document  .filter-options-fieldset {
-	float: left;
-}
-#config-document  .filter-options-fieldset:empty {
-	display:none;
-}
-*/
-
 .ph-filter-options.component.com_phocacart {
 
 	float:left;
 	margin-top: 2em;
 	margin-left: 20px;
+}
+
+.ph-filter-options.config {
+    margin: 0.5em 0;
+}
+
+.phFilterOptionsHidden {
+	display:none;
+}
+
+.phFilterOptionsNoStyle {
+	/*border: 0;*/
+	border-bottom: 0;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.phFilterOptionsNoStyle fieldset {
+	border: 0;
+}
+
+.phFilterOptionsHeader {
+	background: #f1d600;
+	color: #000;
+    padding: 5px;
+	font-size:small;
+    float: left;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.phFilterOptionsFieldset {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.phFilterOptionsDisabled {
+    pointer-events: none;
 }
