@@ -56,7 +56,7 @@ Phoca Filter Options System Plugin is a Joomla! CMS Plugin. It adds the ability 
 
 ## Version (Joomla! 4.x)
 
-4.0.3
+4.0.5
 
 
 

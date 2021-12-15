@@ -57,9 +57,16 @@ class plgSystemPhocaFilteroptions extends CMSPlugin
 			return '';
 		}
 
-		//HTMLHelper::_('script', 'media/plg_system_phocafilteroptions/js/config-filter-options.min.js', array('version' => 'auto'));
+		$app 	= Factory::getApplication();
+		$option = $app->input->get('option', '', 'string');
+		$doc 	= Factory::getDocument();
+
+        $oParams['option'] = $option;
+
+        $doc->addScriptOptions('phParamsPFO', $oParams);
+
 		//HTMLHelper::_('script', 'media/plg_system_phocafilteroptions/js/config-filter-options.es6.js', array('version' => 'auto'));
-		HTMLHelper::_('script', 'media/plg_system_phocafilteroptions/js/config-filter-options.es5.min.js', array('version' => 'auto'));
+		HTMLHelper::_('script', 'media/plg_system_phocafilteroptions/js/config-filter-options.es6.min.js', array('version' => 'auto'));
 		HTMLHelper::_('stylesheet', 'media/plg_system_phocafilteroptions/css/filter-options.css', array('version' => 'auto'));
 
 		return true;
@@ -81,11 +88,11 @@ class plgSystemPhocaFilteroptions extends CMSPlugin
 
 		if ($option == 'com_config') {
 			$addHtml = '<div class="ph-filter-options config">'
-					  .'<form class="form-inline"><input class="form-control" type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form>'
+					  .'<form class="form-inline input-append input-group"><input class="form-control" type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form>'
 				  .'</div>';
 		} else {
 			$addHtml = '<div class="ph-filter-options component '.$option.'">'
-					  .'<form class="form-inline"><input type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form>'
+					  .'<form class="form-inline input-append input-group"><input class="form-control" type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form>'
 				  .'</div>';
 		}
 

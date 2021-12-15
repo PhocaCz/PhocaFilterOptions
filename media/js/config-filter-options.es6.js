@@ -22,8 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	
 	function filterOptions(str) {
-		
-		let hideElements 		= '.tab-pane .alert, .tab-pane .field-spacer, fieldset legend, #sendtestmail, .tab-description, .tab-pane h3, .ph-admin-additional-box';
+
+
+		var phVars 				= Joomla.getOptions('phParamsPFO');
+
+		let hideElements 		= '.tab-pane .alert, .tab-pane .field-spacer, fieldset legend, #sendtestmail, .tab-description, .tab-pane h3, .ph-admin-additional-box, .spacer, .field-spacer';
 		let hideElementBoxes	= '.tab-header, .ph-options-head, .ph-options-head-expert';
 		let tab 				= '#configTabs div button';
 		let tabContent			= '#configTabs > joomla-tab-element';
@@ -33,7 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		let tabRow				= '.tab-pane .row div';
 		let tabFieldset			= '.tab-pane .row div fieldset';
 		
+		if (phVars['option'] != 'com_config') {
 
+			tab 				= 'joomla-tab div button';
+			tabContent			= 'joomla-tab > joomla-tab-element';
+			excludeTabs			= '#page-filters, #page-permissions, #permissions, #permissions_label, #products';
+
+			// Editors get problems when they parent div is control-group
+			// So because of editors we try to use div instead
+			itemParameter		= 'div .control-label label';
+		}
+		
 		// Get active tab and return it back after filtering
 		let activeTab = false;
 		document.querySelectorAll(tabContent).forEach((elem) => {
@@ -122,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					let res = item.match(re);
 					
 					if (res) {
+						
 						//ePP.style.display = "block";
 						ePP.classList.remove('phFilterOptionsHidden');
 					}

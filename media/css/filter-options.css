@@ -1,12 +1,19 @@
+.ph-filter-options.component,
 .ph-filter-options.component.com_phocacart {
-
-	float:left;
-	margin-top: 2em;
-	margin-left: 20px;
+    margin-bottom: 0.5em;
 }
 
 .ph-filter-options.config {
     margin: 0.5em 0;
+}
+
+.ph-filter-options .form-control {
+
+    max-width: 18em;
+}
+
+.ph-filter-options .form-control:focus {
+    box-shadow: none;
 }
 
 .phFilterOptionsHidden {
@@ -31,10 +38,11 @@
 	color: #000;
     padding: 5px;
 	font-size:small;
-    float: left;
+    display: inline-block;
     border-radius: 5px;
     margin: 2px;
 }
+
 
 .phFilterOptionsFieldset {
 	margin-top: 0;

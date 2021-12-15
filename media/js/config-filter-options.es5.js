@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function filterOptions(str) {
 
-		var hideElements = '.tab-pane .alert, .tab-pane .field-spacer, fieldset legend, #sendtestmail, .tab-description, .tab-pane h3, .ph-admin-additional-box';
+		var hideElements 		= '.tab-pane .alert, .tab-pane .field-spacer, fieldset legend, #sendtestmail, .tab-description, .tab-pane h3, .ph-admin-additional-box, .spacer, .field-spacer';
 		var hideElementBoxes = '.tab-header, .ph-options-head, .ph-options-head-expert';
 		var tab = '#configTabs div button';
 		var tabContent = '#configTabs > joomla-tab-element';
