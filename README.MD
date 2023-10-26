@@ -58,6 +58,10 @@ Phoca Filter Options System Plugin is a Joomla! CMS Plugin. It adds the ability 
 
 4.0.5
 
+## Version (Joomla! 5.x)
+
+5.0.0
+
 
 
 ## License
@@ -67,3 +71,17 @@ GNU/GPL
 
 
 This project is open source project - feel free to contribute! Thank you.
+
+
+
+## Social Media
+
+- [Phoca on Facebook](https://www.facebook.com/Phoca.cz)
+
+- [Phoca on X (Twitter)](https://twitter.com/PhocaCz)
+
+- [Phoca on YouTube](https://www.youtube.com/user/phocavideos)
+
+- [Phoca on GitHub](https://github.com/PhocaCz)
+
+- [Phoca on Reddit](https://www.reddit.com/user/PhocaCz)

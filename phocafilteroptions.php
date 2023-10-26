@@ -11,6 +11,7 @@
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Language\Text;
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport( 'joomla.plugin.plugin' );
@@ -88,11 +89,11 @@ class plgSystemPhocaFilteroptions extends CMSPlugin
 
 		if ($option == 'com_config') {
 			$addHtml = '<div class="ph-filter-options config">'
-					  .'<form class="form-inline input-append input-group"><input class="form-control" type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form>'
+					  .'<form class="form-inline input-append input-group"><input class="form-control" type="text" id="filterOptionsInput" placeholder="'.Text::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. Text::_('JSEARCH_FILTER_CLEAR').'">'.Text::_('JSEARCH_FILTER_CLEAR').'</button></form>'
 				  .'</div>';
 		} else {
 			$addHtml = '<div class="ph-filter-options component '.$option.'">'
-					  .'<form class="form-inline input-append input-group"><input class="form-control" type="text" id="filterOptionsInput" placeholder="'.JText::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. JText::_('JSEARCH_FILTER_CLEAR').'">'.JText::_('JSEARCH_FILTER_CLEAR').'</button></form>'
+					  .'<form class="form-inline input-append input-group"><input class="form-control" type="text" id="filterOptionsInput" placeholder="'.Text::_('PLG_SYSTEM_PHOCAFILTEROPTIONS_TYPE_FILTER_OPTIONS').'" /> <button type="button" id="filterOptionsClear" class="btn btn-primary" title="'. Text::_('JSEARCH_FILTER_CLEAR').'">'.Text::_('JSEARCH_FILTER_CLEAR').'</button></form>'
 				  .'</div>';
 		}
 
